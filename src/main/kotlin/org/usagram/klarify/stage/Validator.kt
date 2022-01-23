@@ -8,7 +8,7 @@ class Validator<T> internal constructor(
 ) : Stage<T, T>, ValidatorLike<T> {
 
     override fun invoke(value: T): Output<T> =
-        when (val test = test(value)) {
+        when (val test = constraints(value)) {
             Test.Passed -> Output.Completed(value)
             is Test.Violated -> Output.Aborted(test.reasons)
         }
@@ -17,14 +17,5 @@ class Validator<T> internal constructor(
         constraints
 
     override fun toString(): String =
-        when (constraints.size) {
-            0 -> "[]"
-            1 -> constraints.single().toString()
-            else -> constraints.joinToString(", ", "[", "]")
-        }
-
-    private fun test(value: T): Test {
-        val identityElement: Test = Test.Passed
-        return constraints.fold(identityElement) { test, constraint -> test + constraint(value) }
-    }
+        constraints.toString()
 }
