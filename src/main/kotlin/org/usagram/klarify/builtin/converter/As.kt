@@ -3,11 +3,11 @@ package org.usagram.klarify.builtin.converter
 import org.usagram.klarify.Output
 import org.usagram.klarify.converter.Converter
 
-class As<A, B>(
-    private val convert: (A) -> Output<B>
-) : Converter<A, B> {
+class As<I, O>(
+    private val convert: (I) -> Output<O>
+) : Converter<I, O> {
 
-    override fun invoke(value: A): Output<B> =
+    override fun invoke(value: I): Output<O> =
         convert(value)
 
     override fun toString(): String =
