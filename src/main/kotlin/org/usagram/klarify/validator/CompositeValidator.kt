@@ -10,7 +10,11 @@ internal class CompositeValidator<I>(
         validators.fold(Validity.valid()) { validity, validator -> validity + validator(value) }
 
     override fun toString(): String =
-        validators.singleOrNull()?.toString() ?: "{ ${validators.joinToString(", ")} }"
+        when (validators.size) {
+            0 -> "[]"
+            1 -> validators.single().toString()
+            else -> validators.joinToString(", ", "[", "]")
+        }
 
     companion object {
 
