@@ -1,4 +1,4 @@
-package org.usagram.klarify.stage
+package org.usagram.klarify
 
 internal class Pipeline<I, L, O>(
     private val stage1: Stage<I, L>,

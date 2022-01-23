@@ -1,6 +1,4 @@
-package org.usagram.klarify.constraint
-
-import org.usagram.klarify.stage.ValidatorLike
+package org.usagram.klarify
 
 interface Constraint<in T> : (T) -> Test, ValidatorLike<T> {
 

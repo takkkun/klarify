@@ -1,7 +1,4 @@
-package org.usagram.klarify.stage
-
-import org.usagram.klarify.constraint.Constraints
-import org.usagram.klarify.constraint.Test
+package org.usagram.klarify
 
 class Validator<T> internal constructor(
     private val constraints: Constraints<T>

@@ -1,4 +1,4 @@
-package org.usagram.klarify.constraint
+package org.usagram.klarify
 
 class Constraints<in T> private constructor(
     private val constraints: List<Constraint<T>>

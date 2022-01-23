@@ -1,8 +1,9 @@
 package org.usagram.klarify.builtin
 
-import org.usagram.klarify.stage.Converter
-import org.usagram.klarify.stage.Output
-import org.usagram.klarify.stage.Stage
+import org.usagram.klarify.Converter
+import org.usagram.klarify.Dsl
+import org.usagram.klarify.Output
+import org.usagram.klarify.Stage
 
 class Optional<I, O>(
     private val stage: Stage<I, O>
@@ -14,3 +15,6 @@ class Optional<I, O>(
     override fun toString(): String =
         "Optional($stage)"
 }
+
+fun <I, O> Dsl<I?>.optional(build: Dsl<I>.() -> Stage<I, O>): Converter<I?, O?> =
+    Optional(Dsl<I>().build())

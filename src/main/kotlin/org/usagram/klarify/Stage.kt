@@ -1,4 +1,4 @@
-package org.usagram.klarify.stage
+package org.usagram.klarify
 
 interface Stage<in I, out O> : (I) -> Output<O> {
 

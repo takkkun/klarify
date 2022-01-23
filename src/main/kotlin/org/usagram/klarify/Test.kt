@@ -1,7 +1,4 @@
-package org.usagram.klarify.constraint
-
-import org.usagram.klarify.Reason
-import org.usagram.klarify.Reasons
+package org.usagram.klarify
 
 sealed interface Test {
 

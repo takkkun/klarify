@@ -1,6 +1,4 @@
-package org.usagram.klarify.dsl
-
-import org.usagram.klarify.stage.Stage
+package org.usagram.klarify
 
 class Dsl<T> {
 
