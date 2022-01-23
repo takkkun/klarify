@@ -1,7 +1,7 @@
-package org.usagram.klarify.builtin.converter
+package org.usagram.klarify.builtin
 
-import org.usagram.klarify.Output
-import org.usagram.klarify.converter.Converter
+import org.usagram.klarify.stage.Converter
+import org.usagram.klarify.stage.Output
 
 class To<I, O>(
     private val convert: (I) -> Output<O>

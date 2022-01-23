@@ -1,4 +1,7 @@
-package org.usagram.klarify
+package org.usagram.klarify.stage
+
+import org.usagram.klarify.Reason
+import org.usagram.klarify.Reasons
 
 sealed interface Output<out T> {
 

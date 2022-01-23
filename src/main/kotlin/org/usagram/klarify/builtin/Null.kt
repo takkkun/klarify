@@ -1,4 +1,4 @@
-package org.usagram.klarify.builtin.converter.reason
+package org.usagram.klarify.builtin
 
 import org.usagram.klarify.Reason
 
